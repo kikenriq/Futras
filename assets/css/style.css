@@ -158,6 +158,23 @@ body {
 .btn-secondary,
 .btn-primary:is(:hover, :focus) { background-color: var(--orange-web); }
 
+.section { padding-block: var(--section-padding); }
+
+
+.h1,
+.h2,
+.h3 {
+  color: var(--black-chocolate);
+  font-family: var(--ff-playfair);
+  line-height: 1.1;
+}
+
+.h1 { font-size: var(--fs-1); }
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 { font-size: var(--fs-4); }
+
 
 
 
@@ -265,18 +282,39 @@ body {
   pointer-events: all;
 }
 
-
-
-
-
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
 
+.hero {
+  padding-block: 130px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25%;
+}
+
+.hero-subtitle {
+  color: var(--blue-green-color-wheel);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title { margin-block: 16px 30px; }
+
+.hero-text {
+  color: var(--black-chocolate);
+  font-weight: var(--fw-600);
+}
+
+.hero .btm { margin-block: 20px; }
+
+.hero :is(.social-wrapper, .social-list) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
 
 
