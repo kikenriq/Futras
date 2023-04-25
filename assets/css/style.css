@@ -191,6 +191,77 @@ body {
   object-fit: cover;
 }
 
+.section-subtitle {
+  color: var(--color, var(--blue-green-color-wheel));
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-block-end: 15px;
+}
+
+.section-title { text-align: center; }
+
+.section-text { font-size: var(--fs-5); }
+
+.title-wrapper {
+  position: relative;
+  padding-block: 40px;
+  margin-block-end: 50px;
+  z-index: 1;
+}
+
+.title-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 160px;
+  background-image: url('../images/title-shape-white.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.card-link {
+  color: var(--spanish-gray);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  transition: var(--transition-2);
+}
+
+.card-link .span {
+  display: inline-block;
+  color: var(--hover-color, var(--black-chocolate));
+  transition: var(--transition-2);
+}
+
+.card-meta-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.card-meta-item {
+  position: relative;
+  color: var(--orange-web);
+  font-size: var(--fs-6);
+}
+
+.card-meta-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -15px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--blue-green-color-wheel);
+  border-radius: 50%;
+}
 
 
 
@@ -494,14 +565,74 @@ body {
   z-index: 1;
 }
 
+.about-content {
+  position: relative;
+  background-color: var(--white);
+  padding: 40px;
+  z-index: 1;
+}
+
+.about-content::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  width: 110px;
+  height: 110px;
+  background-image: url('../images/about-shape-2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.about :is(.section-subtitle, .section-title) { text-align: left; }
+
+.about .section-title { margin-inline-end: 20px; }
+
+.about-h3 {
+  color: var(--blue-green-color-wheel);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-600);
+  margin-block: 30px 10px;
+}
+
 
 
 
 /*-----------------------------------*\
   #COURSE
 \*-----------------------------------*/
+.course-card .card-banner { margin-block-end: 30px; }
+
+.course-card .card-content {
+  position: relative;
+  padding: 20px;
+  padding-inline-end: 15px;
+}
+
+.course-card .card-price {
+  background-color: var(--blue-green-color-wheel);
+  color: var(--white);
+  font-weight: var(--fw-700);
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  margin-block-start: -80px;
+  margin-block-end: 20px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
 
 
+.course-card .card-title {
+  margin-block: 10px 20px;
+  transition: var(--transition-1);
+}
+
+.course-card .card-title:is(:hover, :focus) { color: var(--orange-web) }
 
 
 
