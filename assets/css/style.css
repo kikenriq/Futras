@@ -640,7 +640,29 @@ body {
   #BLOG
 \*-----------------------------------*/
 
+.blog { background-color: var(--cultured);}
 
+.blog-card {
+  background-color: var(--white);
+  min-height: 420px;
+  padding: 20px;
+  display: grid;
+  align-content: center;
+  transition: var(--transition-2);
+}
+
+.blog-card:is(:hover, :focus-within) {
+  --hover-color: var(--white);
+  background-color: var(--blue-green-color-wheel);
+  color: var(--white);
+}
+
+.blog-card .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
 
 
 
