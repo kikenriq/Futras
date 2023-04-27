@@ -664,12 +664,97 @@ body {
   gap: 20px;
 }
 
+.blog-card .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.blog-card .publish-date {
+  background-color: var(--hover-color, var(--blue-green-color-wheel));
+  color: var(--white);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  line-height: 1;
+  text-align: center;
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-content: center;
+  border-radius: var(--radius-2);
+  transition: var(--transition-2);
+}
+
+.blog-card:is(:hover, :focus-within) .publish-date { color: var(--blue-green-color-wheel); }
+
+.blog-card .publish-date .span{
+  color: var(--orange-web);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-700);
+  line-height: 1;
+  margin-block-end: 5px;
+}
+
+.blog-card .card-link {
+  font-weight: var(--fw-700);
+  margin-block-end: 10px;
+}
+
+.blog-card:is(:hover, :focus-within) .card-link { color: var(--orange-web); }
+
+.blog-card .card-meta-item:not(:last-child)::after {
+  background-color: var(--hover-color, var(--black-chocolate));
+  transition: var(--transition-2);
+}
+
+.blog-card .card-title{
+  color: var(--hover-color);
+  margin-block: 30px 15px;
+  transition: var(--transition-2);
+}
+
+.blog-card .card-text { font-size: var(--fs-5); }
 
 
 /*-----------------------------------*\
   #APP
 \*-----------------------------------*/
 
+.app-card {
+  position: relative;
+  background-color: var(--orange-web);
+  padding: 30px;
+  border-radius: var(--radius-2);
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.app .section-subtitle { font-size: var(--fs-5); }
+
+.app .section-title {
+  color: var(--white);
+  margin-block-end: 40px;
+}
+
+.app .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.app .app-link {
+  background-color: var(--white);
+  min-height: 50px;
+  padding-inline: 20px;
+  border-radius: var(--radius-10);
+  display: grid;
+  place-content: center;
+  outline: 4px solid var(--white);
+}
 
 
 
