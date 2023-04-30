@@ -2,14 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -971,7 +963,250 @@ body {
 /*****responsive for larger than 768px screen****/
 
 @media (min-width: 768px) {
-  
+  :root {
+    --fs-1: 6.4rem;
+    --fs-2: 5.7rem;
+
+    --section-padding: 80px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  .logo { font-size: 35px; }
+
+  .hero-title { max-width: 15ch; }
+
+  .service .grid-list { grid-template-columns: 1fr 1fr; }
+
+  .about-content { padding: 100px 80px; }
+
+  .about .section-title { --fs-2: 5.7rem; }
+
+  .course-card .course-price {
+    width: 80px;
+    height: 80px;
+    font-size: var(--fs-4);
+    margin-block-start: -100px;
+  }
+
+  .course-card .h3 { --fs-4: 2.4rem; }
+
+  .course-card .card-content {
+    padding: 30px;
+    padding-block-end: 25px;
+  }
+
+  .blog-card {padding: 45px; }
+
+  .app-card { padding: 100px 50px; }
 }
+/*****responsive for larger than 992px screen****/
+@media (min-width: 992px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 100px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 960px; }
+
+  .btn {
+    font-size: unset;
+    padding: 13px 40px;
+  }
+
+  :is(.service, .course, .blog) .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-toggle-btn,
+  .overlay { display: none; }
+
+  .header { padding-block: 20px; }
+
+  .navbar,
+  .navbar.active,
+  .navbar-list,
+  .navbar-item { all: unset; }
+  
+  .navbar { margin-inline-start: auto; }
+
+  .header .btn { margin-block-start: 0; }
+
+  .navbar-list { display: flex; }
+
+  .navbar-link {
+    font-size: unset;
+    padding-inline: 15px;
+    transition: var(--transition-1);
+  }
+
+  .navbar-link:is(:hover, :focus) { color: var(--orange-web); }
+
+  .service .grid-list { gap: 0; }
+
+  .service .grid-list > li:nth-child(2) { border-inline: 1px solid var(--cultured); }
+
+  .service-card .h3 { --fs-4: 3rem; }
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-banner {margin-block-end: 0;}
+
+  .about-content { padding: 40px; }
+
+  .about .section-title { --fs-2: 4.4rem; }
+
+  .about-h3 { --fs-2: 2.4rem; }
+
+  .blog-card { padding: 30px; }
+
+  .app .section-title { margin-block-end: 55px; }
+
+  .app .app-link {
+    width: 180px;
+    height: 65px;
+  }
+
+  .app .app-link .img { width: max-content; }
+
+  .footer-top .container { grid-template-columns: 1fr 0.6fr 0.65fr;}
+
+  .footer-list:first-child { grid-column: auto; }
+
+  .footer-list-title { --fs-4: 2.4rem; }
+
+  .footer-link,
+  .address { --fs-6: 1.5rem; }
+
+  .footer-top .btn-secondary { padding-inline: 30px; }
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright { margin-block-end: 0; }
+}
+
 /*****responsive for larger than 575px screen****/
-/*****responsive for larger than 575px screen****/
+@media (min-width: 1200px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-1: 8rem;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 140px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 1200px; }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header .container { gap: 35px; }
+
+  .navbar-link { padding-inline: 25px; }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    padding-block: 200px 100px;
+    background-position: 35%;
+  }
+
+
+
+  /**
+   * SERVICE
+   */
+
+  .service-card .h3 { --fs-4: 3.5rem; }
+
+  .service-card .btn { opacity: 0; }
+
+  .service-card:is(:hover, :focus-within, .active) .btn { opacity: 1; }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about-content { padding: 100px 80px; }
+
+  .about .section-title { --fs-2: 5.7rem; }
+
+  .about-h3 { --fs-2: 3rem; }
+
+
+
+  /**
+   * BLOG
+   */
+
+  .blog-card { padding: 45px; }
+
+  .blog-card .publish-date {
+    width: 80px;
+    height: 80px;
+  }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { column-gap: 100px; }
+
+}
